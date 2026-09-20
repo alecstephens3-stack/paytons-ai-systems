@@ -45,6 +45,12 @@ Use consistent time horizons and include failure costs and unacceptable downside
 
 Keep claims proportional to the evidence. A time-saving claim needs a baseline and must include supervision, correction, and verification. A before/after change may have other causes. A completed task, a better metric, and a better outcome are different observations.
 
+## Progress records
+
+For repeated decisions, estimates, experiments, habits, or metrics that need calibration, use `templates/PROGRESS RECORDS.md`. Add only the record types that can change a decision. Link each record to the original decision log, preserve the original prediction or stop rule, and append the observed result instead of rewriting the forecast after the fact.
+
+Use the existing decision log as the source decision and `AFTER ACTION REVIEW.md` to close a material decision. Review due records during an existing authorized review or assign a named human owner. A due date or trigger does not create a schedule.
+
 ## Decision rules
 
 - Prefer a cheap reversible test when uncertainty is high.
