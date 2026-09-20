@@ -1,6 +1,6 @@
 {
   "title": "Payton's AI Systems",
-  "version": "3.9.0",
+  "version": "3.10.0",
   "releaseStatus": "public_release",
   "maintainer": "Payton Bilodeau",
   "attribution": "Created and maintained by Payton Bilodeau.",
@@ -184,6 +184,7 @@
         "templates/DECISION BRIEF.md",
         "templates/OPTION COMPARISON.md",
         "templates/DECISION LOG.md",
+        "templates/PROGRESS RECORDS.md",
         "templates/ACTION PLAN.md",
         "templates/ASSUMPTION LEDGER.md",
         "templates/PREMORTEM.md",

@@ -2,6 +2,13 @@
 
 New releases appear first. Apply only the changes you want to a separate working copy.
 
+## 3.10.0 - 2026-09-20
+
+- Add one optional System 04 template for forecast calibration, bounded experiments, trigger-action checks, metric and countermetric pairs, and due-record review.
+- Preserve original predictions and stop rules, append observed results, and compare only sufficiently similar forecasts.
+- Reuse the existing decision log and after-action review. A due date or trigger does not create a schedule.
+- These are generic records. No private context, local paths, seeded metrics, or source course material is included.
+
 ## 3.9.0 - 2026-09-19
 
 - Connect consequential decisions to a baseline, target, leading indicator, guardrail, review owner, and continue/change/stop conditions.
