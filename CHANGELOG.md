@@ -2,6 +2,11 @@
 
 New releases appear first. Apply only the changes you want to a separate working copy.
 
+## 3.10.1 - 2026-09-20
+
+- Made KPI definitions, incentive risks, ownership, and response rules explicit in decision reviews.
+- Clarified that probability ranges need a basis and that time estimates must not apply the same historical correction twice.
+
 ## 3.10.0 - 2026-09-20
 
 - Add one optional System 04 template for forecast calibration, bounded experiments, trigger-action checks, metric and countermetric pairs, and due-record review.

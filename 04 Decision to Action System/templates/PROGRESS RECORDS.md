@@ -55,15 +55,19 @@ Do not assume a missed action proves the cue failed. Check whether the cue happe
 - **Linked decision:** [decision log entry]
 - **Intended real-world outcome:** [change for the user, work, or business]
 - **Outcome metric and proxy limit:** [name, definition, and what it may miss]
+- **Formula and unit:** [calculation, numerator, denominator when applicable, and unit]
+- **Incentive risk:** [how optimizing this number could harm the intended outcome]
 - **Countermetric:** [quality, risk, cost, or other protected result]
 - **Ground-truth check:** [direct inspection or qualitative feedback]
 - **Source, population, and window:** [keep these stable or record the change]
 - **Baseline:** [value and date]
+- **Decision owner:** [person or role]
+- **Review and response rule:** [date or observable trigger, and conditions for continuing, changing, or stopping]
 - **Latest result:** [value and date]
 - **Interpretation:** [what changed, what did not, and data limits]
 - **Decision:** [action this evidence changes, or no change]
 
-An improved outcome metric is not a win when the countermetric shows unacceptable harm.
+An improved outcome metric is not a win when the countermetric shows unacceptable harm. Keep the measurement definition visible at review, including relevant exclusions. Unknown data is not zero. A missing baseline makes the first suitable measurement a baseline, not proof of improvement.
 
 ## Due-record review
 
