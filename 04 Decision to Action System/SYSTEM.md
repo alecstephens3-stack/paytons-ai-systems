@@ -29,7 +29,7 @@ Turn a vague or overloaded decision into a clear choice and the next useful acti
 11. Inspect the defaults, friction, incentives, metrics, and inherited rules that could distort the choice.
 12. Pressure-test the preferred option with the strongest competing explanation, a premortem, and a success case.
 13. Recommend one option or a small test.
-14. Record the decision, probability range, controlling assumption, and immediate action before the outcome is known.
+14. Record the decision, a probability range when there is a defensible basis, the controlling assumption, and immediate action before the outcome is known.
 15. Define the success, stop, or switch condition that would justify revisiting it.
 16. For a consequential, repeated, or explicitly measured decision, record the baseline, measurement source and window, target, one useful leading indicator, and a guardrail. Name the review owner and date or observable trigger. If no baseline exists, label the first run as baseline collection. Skip fields that would not affect a simple reversible choice.
 
@@ -43,7 +43,11 @@ Do not turn ordinary execution into compulsory homework or ask for approval alre
 
 Use consistent time horizons and include failure costs and unacceptable downside in expected-value comparisons. A positive average payoff does not make every risk acceptable. Label guessed probabilities as estimates. Do not count correlated observations twice when updating a belief or multiply unconditional stage-success rates unless independence is justified. Check units, arithmetic, and sensitivity to the assumption that controls the result.
 
+Use comparable actual durations when estimating work. State the basis for any confidence range, and do not apply the same historical correction again to an estimate already based on those actuals.
+
 Keep claims proportional to the evidence. A time-saving claim needs a baseline and must include supervision, correction, and verification. A before/after change may have other causes. A completed task, a better metric, and a better outcome are different observations.
+
+Before rewarding or targeting a metric, ask how someone could improve the number while worsening the outcome. Record the calculation, included population, measurement window, source, dated baseline, owner, and response rule. Include counts alongside rates when sample size affects interpretation. Check a countermetric and a sample of the actual work.
 
 ## Progress records
 
