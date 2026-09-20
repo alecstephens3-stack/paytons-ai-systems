@@ -2,6 +2,15 @@
 
 New releases appear first. Apply only the changes you want to a separate working copy.
 
+## 3.9.0 - 2026-09-19
+
+- Connect consequential decisions to a baseline, target, leading indicator, guardrail, review owner, and continue/change/stop conditions.
+- Distinguish execution, advice, coaching, and collaboration so AI support fits the user's intent and preserves decision ownership.
+- Add checks for correlated evidence, uncertain probabilities, hidden correction costs, and claims of improvement without outcome evidence.
+- Extend the existing decision log and after-action review. Simple tasks remain simple, and a written review date does not create an automation.
+- Align System 04's starting instructions with its existing output-folder convention.
+- These are generic procedures. No private context or source course material is included.
+
 ## 3.8.3 - 2026-09-17
 
 - Tie editing-style observations to exact reference versions and timestamps.
