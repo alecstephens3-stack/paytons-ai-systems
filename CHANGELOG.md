@@ -2,6 +2,13 @@
 
 New releases appear first. Apply only the changes you want to a separate working copy.
 
+## 3.10.2 - 2026-09-25
+
+- Add an optional audio-service acceptance record for current account eligibility, recovery of existing jobs, and checks on downloaded content and timing before final delivery.
+- Require known editorial defects and rejected recognition ranges to have a repair, a specific retain reason or an explicit remaining review before handoff.
+- Check complete caption letter shapes and the final composite against destination controls.
+- Preserve the original pre-edit tool and user-selected audio routes. These are generic review procedures with no private account, media or style settings.
+
 ## 3.10.1 - 2026-09-20
 
 - Made KPI definitions, incentive risks, ownership, and response rules explicit in decision reviews.

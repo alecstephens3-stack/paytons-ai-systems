@@ -62,6 +62,23 @@ needed. Subtracting a fixed pad from padded intervals can create false gaps if
 adjacent intervals shortened that padding. Neither speech detection nor low
 energy alone decides a cut.
 
+## Unfinished defects and rejected analysis
+
+Before handing over the agreed edit, review takes, joins, internal phrase gaps,
+non-speech sounds and retained screen holds. Resolve known defects within the
+authorized scope. Keep a specific reason for retained material, such as a
+complete word, necessary action or time to understand a result. A later human
+review does not complete a pass the agent left unfinished.
+
+| Range and version | Defect or failed analysis | Source check | Repair or retain reason | Remaining review and owner |
+|---|---|---|---|---|
+| [source/output range] | [observed issue or rejected recognition] | [method and actual coverage] | [repair and rebuilt-sequence evidence, or specific retain reason] | [named next check, or none] |
+
+If recognition was rejected, inspect and retranscribe the affected source before
+using it for word-level decisions. Preserve uncertain speech pending review.
+Keep technical inspection, actual playback and unresolved work distinct, and
+label a delivery awaiting required playback as a review copy.
+
 ## Optional batch handoff
 
 - Shared project and intended review order:

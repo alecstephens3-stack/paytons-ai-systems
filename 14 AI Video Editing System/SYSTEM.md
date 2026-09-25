@@ -62,6 +62,12 @@ stems. Preserve sync and the intentional source mix. Compare processing at
 matched perceived loudness, listen to a complete bypass and record the chain.
 Do not apply a second enhancement pass to audio already accepted for handoff.
 
+When the authorized route uses an external audio service, complete System 05's
+`templates/AUDIO COMPARISON.md` service checks. Confirm current account eligibility,
+recover matching completed work before creating another job, and validate the
+downloaded audio against the approved input before using it. Keep the user's
+chosen processing stage and route; this check does not make a service mandatory.
+
 Inspect microphone channels across recording setups and transitions. Intermittent
 one-sided dialogue needs a channel diagnosis distinct from low level, noise and
 room echo. Center a verified mono microphone without doubling the mix or collapsing
@@ -94,6 +100,12 @@ Deliver a polished cut with sound and color but no added graphics for the first
 review, unless the user requested a different sequence. Save the native project,
 timeline snapshot and source map. Keep picture and dialogue linked. While a
 person is editing, leave the project alone.
+
+Before handoff, close each known editorial defect within the agreed scope or
+record its exact range, retain reason and remaining review. A planned human
+final pass does not excuse unfinished routine cleanup. If recognition failed
+in a retained range, repair the transcript from source evidence or mark the
+range unresolved; do not let rejected analysis silently become a passed check.
 
 ## 4. Learn from the actual manual revision
 

@@ -57,6 +57,27 @@ moving footage. Choose the smallest effective treatment that keeps letter shapes
 clear at delivery size. A heavier treatment can also merge letters or hide detail;
 judge the exported result rather than relying on a preset name.
 
+Check the visible letter shapes of the longest captions, including two-line
+phrases, against destination controls and the other overlays. Text-box coordinates
+alone do not prove clearance. Require complete words during the intended reading
+interval. Inspect entrances and exits for unintended clipping, malformed letters
+or obstruction while preserving deliberate fades and reveals. Check the final
+composite after captions are added.
+
+## External audio acceptance, when applicable
+
+- Approved input and settings match the processing receipt:
+- Current account eligibility and any paid-run authority checked before processing:
+- Existing matching output recovered or reused where available:
+- Downloaded duration, sample count and early/middle/end alignment checked:
+- Added introductions, missing words and unintended timing changes checked:
+- Final encoded audio/video sync and complete ending checked:
+- Provider completion, technical validation and listening coverage recorded separately:
+
+Use System 05's `templates/AUDIO COMPARISON.md` for the procedure and receipt.
+Keep rejected output separate from the approved master, and update dependent
+timing only after an intentional change is approved.
+
 ## Requested refinements and actual results
 
 | Range | Accepted refinement | Intended native change | Native/export evidence | Completed, failed, or unchanged with reason |
