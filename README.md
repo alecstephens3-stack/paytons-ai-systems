@@ -55,6 +55,11 @@ This repository is the public release channel. Reusable improvements from Payton
 
 Updates never change your local customized files automatically. Read `CHANGELOG.md`, compare the changed files, and adopt only what you want.
 
+Version 3.10.2 strengthens audio-service acceptance and editorial handoff checks.
+Use [the optional audio record](05%20Video%20Pre-Edit%20System/templates/AUDIO%20COMPARISON.md)
+to check account eligibility, recover existing jobs and verify downloaded audio
+before delivery. The original pre-edit tool remains unchanged.
+
 ## License
 
 No purchase is required. You may use and adapt the templates and original tools for personal or commercial work, subject to `LICENSE AND USE.md` and the separate terms for third-party software and assets.
