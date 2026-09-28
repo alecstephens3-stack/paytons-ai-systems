@@ -27,6 +27,9 @@ cut first, then add one original title or annotation. Save the editable project
 and watch the export. This is a capability test, not a deadline or a promise
 of a perfect first attempt. Software setup can take longer than the test edit.
 
+For the full path from setup through cuts, sound, color, one graphic, review and
+delivery, follow the [post-production walkthrough](guides/POST-PRODUCTION%20WALKTHROUGH.md).
+
 ## Give your AI this message
 
 ```text

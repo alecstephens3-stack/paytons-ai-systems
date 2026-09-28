@@ -2,6 +2,10 @@
 
 This pack contains Systems 05, 06, 09, 10, 13, and 14. Its job is to turn one real idea or recording into a repeatable content process without rebuilding the creative rules every time.
 
+If you already have footage and want to focus on post-production, use the
+[AI Video Editing Pack](AI%20Video%20Editing%20Pack/README.md). It gives you a
+shorter starting route through the existing editing, motion and repurposing systems.
+
 ## Fast first win
 
 Choose one:

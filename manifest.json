@@ -1,6 +1,6 @@
 {
   "title": "Payton's AI Systems",
-  "version": "3.10.2",
+  "version": "3.11.0",
   "releaseStatus": "public_release",
   "maintainer": "Payton Bilodeau",
   "attribution": "Created and maintained by Payton Bilodeau.",
@@ -11,6 +11,8 @@
     "BUNDLE ORCHESTRATOR.md",
     "CONTENT PACK ORCHESTRATOR.md",
     "SKILLS AND AUTOMATION PACK ORCHESTRATOR.md",
+    "AI Video Editing Pack/README.md",
+    "AI Video Editing Pack/START HERE.md",
     "SETUP GUIDE.md",
     "GLOSSARY.md",
     "CHANGELOG.md",
@@ -73,6 +75,18 @@
       ],
       "orchestrator": "BUNDLE ORCHESTRATOR.md",
       "tracker": "templates/MEASUREMENT DASHBOARD.md"
+    },
+    {
+      "key": "video_editing",
+      "name": "AI Video Editing Pack",
+      "systemIds": [
+        "05",
+        "09",
+        "10",
+        "14"
+      ],
+      "orchestrator": "AI Video Editing Pack/START HERE.md",
+      "tracker": "14 AI Video Editing System/templates/TEN-RUN EDITING TRACKER.md"
     }
   ],
   "systems": [
@@ -510,7 +524,8 @@
         "templates/TEN-RUN EDITING TRACKER.md",
         "templates/TOOL SETUP.md",
         "tests/test_setup_doctor.py",
-        "tools/setup_doctor.py"
+        "tools/setup_doctor.py",
+        "guides/POST-PRODUCTION WALKTHROUGH.md"
       ]
     }
   ],

@@ -33,6 +33,8 @@ const requiredRootFiles = [
   "BUNDLE ORCHESTRATOR.md",
   "CONTENT PACK ORCHESTRATOR.md",
   "SKILLS AND AUTOMATION PACK ORCHESTRATOR.md",
+  "AI Video Editing Pack/README.md",
+  "AI Video Editing Pack/START HERE.md",
   "SETUP GUIDE.md",
   "GLOSSARY.md",
   "CHANGELOG.md",
@@ -69,6 +71,13 @@ const canonicalBundles = [
     systemIds: ["01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12", "13", "14"],
     orchestrator: "BUNDLE ORCHESTRATOR.md",
     tracker: "templates/MEASUREMENT DASHBOARD.md"
+  },
+  {
+    key: "video_editing",
+    name: "AI Video Editing Pack",
+    systemIds: ["05", "09", "10", "14"],
+    orchestrator: "AI Video Editing Pack/START HERE.md",
+    tracker: "14 AI Video Editing System/templates/TEN-RUN EDITING TRACKER.md"
   }
 ];
 
@@ -515,5 +524,5 @@ if (failures.length) {
 }
 
 console.log(
-  `Library validation passed: ${canonicalSystems.length} canonical systems, 3 public collections, ${actualFiles.size} exactly declared non-empty files, 13 mutation checks, and ${passedToolSuites} runnable tool suites. System 10 keeps its documented first-production proof boundary.`
+  `Library validation passed: ${canonicalSystems.length} canonical systems, ${canonicalBundles.length} public collections, ${actualFiles.size} exactly declared non-empty files, 13 mutation checks, and ${passedToolSuites} runnable tool suites. System 10 keeps its documented first-production proof boundary.`
 );

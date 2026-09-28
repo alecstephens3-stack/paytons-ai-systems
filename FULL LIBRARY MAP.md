@@ -2,6 +2,11 @@
 
 This map shows all fourteen free Payton's AI Systems and the focused collections that help you find a useful starting point. Every system is included in this repository.
 
+For recorded-video work, the [AI Video Editing Pack](AI%20Video%20Editing%20Pack/README.md)
+selects Systems 05, 09, 10 and 14. Its [setup message](AI%20Video%20Editing%20Pack/START%20HERE.md)
+starts with the editor and a short copied recording. The broader collections
+below remain available, and no system has moved or become paid.
+
 | ID | System | Skills and Automation Collection | Content Creation Collection | Complete Library |
 |---|---|---|---|---|
 | 01 | AI Memory and Reflection System | Not included | Not included | Included |

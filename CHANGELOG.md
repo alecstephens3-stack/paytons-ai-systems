@@ -2,6 +2,14 @@
 
 New releases appear first. Apply only the changes you want to a separate working copy.
 
+## 3.11.0 - 2026-09-28
+
+- Add a dedicated free AI Video Editing Pack with a download route and one assistant-guided setup message.
+- Organize the existing editing, pre-edit, motion and waterfall systems as a focused collection without moving or duplicating their source files.
+- Add a practical full post-production walkthrough, including human revisions and reusable feedback.
+- Keep the existing tools and compatibility limits explicit: this pack is templates, instructions and local utilities, not a one-click editor plugin.
+- Extend the manifest and library validator to check the new collection and declared files.
+
 ## 3.10.2 - 2026-09-25
 
 - Add an optional audio-service acceptance record for current account eligibility, recovery of existing jobs, and checks on downloaded content and timing before final delivery.
