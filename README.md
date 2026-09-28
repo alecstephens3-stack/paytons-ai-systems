@@ -4,6 +4,8 @@ Fourteen free, working template systems for turning a file-aware AI assistant in
 
 This is the complete public template library. It is not a prompt list, course, subscription, or coaching offer. Every system has standing instructions, a start guide, editable templates, and, where the work demands it, small local tools with tests.
 
+**Here for AI video editing? Start with the [Free AI Video Editing Pack](AI%20Video%20Editing%20Pack/README.md).** It gives you one setup message and a practical path through cuts, pacing, audio, color, motion, feedback and optional repurposing. The other systems remain available below.
+
 ## Try one in five minutes
 
 1. Pick a system folder below and open its `START HERE.md`.
@@ -33,21 +35,24 @@ To simplify an existing setup, use [System 08's consolidation plan](08%20AI%20Wo
 | 13 | Taste and Packaging | An honesty floor, a boldness obligation, a writing quality gate, and a ledger that makes judgment improve |
 | 14 | AI Video Editing | Set up Resolve and MCP, review an editable cut, build a motion style, and deliver clean and decorated masters |
 
-Every system has a `START HERE.md` and a `SYSTEM.md`. The bigger ones add templates, worked examples, and small local tools with test suites. The three orchestrator files at the root coordinate systems that work together, and `validate-library.mjs` checks the library's structure, privacy rules, and runnable tool suites.
+Every system has a `START HERE.md` and a `SYSTEM.md`. The bigger ones add templates, worked examples, and small local tools with test suites. The collection guides coordinate systems that work together, and `validate-library.mjs` checks the library's structure, privacy rules, and runnable tool suites.
 
 ## Start with video editing
 
-For the full workflow, open [System 14: AI Video Editing](14%20AI%20Video%20Editing%20System/START%20HERE.md). It includes Resolve/MCP setup, Remotion and Hyperframes routes, reference-based style building, manual revision learning and editable delivery. Start with one short copied clip and one visual.
+For the focused collection, open the [AI Video Editing Pack](AI%20Video%20Editing%20Pack/README.md), then use its [setup message](AI%20Video%20Editing%20Pack/START%20HERE.md). The pack links the maintained editing, pre-edit, motion and waterfall systems without duplicating them.
+
+For the full editing workflow, [System 14: AI Video Editing](14%20AI%20Video%20Editing%20System/START%20HERE.md) includes Resolve/MCP setup, Remotion and Hyperframes routes, reference-based style building, manual revision learning and editable delivery. Its [post-production walkthrough](14%20AI%20Video%20Editing%20System/guides/POST-PRODUCTION%20WALKTHROUGH.md) starts with a short copied clip and one useful result.
 
 For a lighter automatic first pass, [System 05: Video Pre-Edit](05%20Video%20Pre-Edit%20System/START%20HERE.md) remains available on its own. Its tool and behavior are unchanged. System 14 coordinates the full edit; System 05 remains optional.
 
 ## Use the complete library or one collection
 
 - **AI Content Creation Collection:** systems 05, 06, 09, 10, 13, and 14
+- **AI Video Editing Pack:** systems 05, 09, 10, and 14, with a dedicated starting page and setup message
 - **AI Skills and Automation Collection:** systems 02, 03, 11, and 12
 - **Complete AI Systems Library:** all fourteen
 
-All fourteen systems and both focused collections are free in this repository. Download a release or clone the repository, keep a clean copy, and do your work in a separate working copy.
+All fourteen systems and all three focused collections are free in this repository. Download the repository ZIP or clone it, keep a clean copy, and do your work in a separate working copy. The editing pack is a focused route through the same files, not a separate paid product or an installed editor plugin.
 
 ## Updates
 
@@ -55,10 +60,9 @@ This repository is the public release channel. Reusable improvements from Payton
 
 Updates never change your local customized files automatically. Read `CHANGELOG.md`, compare the changed files, and adopt only what you want.
 
-Version 3.10.2 strengthens audio-service acceptance and editorial handoff checks.
-Use [the optional audio record](05%20Video%20Pre-Edit%20System/templates/AUDIO%20COMPARISON.md)
-to check account eligibility, recover existing jobs and verify downloaded audio
-before delivery. The original pre-edit tool remains unchanged.
+Version 3.11.0 adds the dedicated AI Video Editing Pack, one assistant-guided
+setup message and a full post-production walkthrough. Existing system paths,
+tools and free access remain unchanged.
 
 ## License
 

@@ -4,6 +4,7 @@ This library contains fourteen working systems that help a file-aware AI remembe
 
 ## Choose where to start
 
+- **AI Video Editing Pack:** Systems 05, 09, 10 and 14. Open [the focused guide](AI%20Video%20Editing%20Pack/README.md) for recorded footage, a setup message and the post-production walkthrough.
 - **AI Content Creation Collection:** Systems 05, 06, 09, 10, 13, and 14.
 - **AI Skills and Automation Collection:** Systems 02, 03, 11, and 12.
 - **Complete AI Systems Library:** All fourteen systems.
