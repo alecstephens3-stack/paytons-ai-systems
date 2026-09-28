@@ -33,8 +33,6 @@ const requiredRootFiles = [
   "BUNDLE ORCHESTRATOR.md",
   "CONTENT PACK ORCHESTRATOR.md",
   "SKILLS AND AUTOMATION PACK ORCHESTRATOR.md",
-  "AI Video Editing Pack/README.md",
-  "AI Video Editing Pack/START HERE.md",
   "SETUP GUIDE.md",
   "GLOSSARY.md",
   "CHANGELOG.md",
@@ -47,7 +45,41 @@ const requiredRootFiles = [
   "templates/SYSTEM ROI TRACKER.md",
   "templates/MEASUREMENT DASHBOARD.md",
   "manifest.json",
-  "validate-library.mjs"
+  "validate-library.mjs",
+  ".agents/plugins/marketplace.json",
+  ".claude-plugin/marketplace.json",
+  "AI Video Editing Pack/.claude-plugin/plugin.json",
+  "AI Video Editing Pack/LICENSE AND USE.md",
+  "AI Video Editing Pack/README.md",
+  "AI Video Editing Pack/SKILL.md",
+  "AI Video Editing Pack/SOURCES.md",
+  "AI Video Editing Pack/START HERE.md",
+  "AI Video Editing Pack/plugin.json",
+  "AI Video Editing Pack/references/AI APP SETUP.md",
+  "AI Video Editing Pack/references/AUDIO GUIDE.md",
+  "AI Video Editing Pack/references/EDIT WORKFLOW.md",
+  "AI Video Editing Pack/references/EDITING JUDGMENT.md",
+  "AI Video Editing Pack/references/EDITOR CONNECTIONS.md",
+  "AI Video Editing Pack/references/MOTION AND LUTS.md",
+  "AI Video Editing Pack/references/PROVIDER CHECK.md",
+  "AI Video Editing Pack/skills/audio/SKILL.md",
+  "AI Video Editing Pack/skills/color/SKILL.md",
+  "AI Video Editing Pack/skills/cuts-pacing/SKILL.md",
+  "AI Video Editing Pack/skills/intake/SKILL.md",
+  "AI Video Editing Pack/skills/platform-refresh/SKILL.md",
+  "AI Video Editing Pack/skills/pre-edit/SKILL.md",
+  "AI Video Editing Pack/skills/review-delivery/SKILL.md",
+  "AI Video Editing Pack/skills/source-research/SKILL.md",
+  "AI Video Editing Pack/skills/style-motion/SKILL.md",
+  "AI Video Editing Pack/skills/vibe-editing-setup/SKILL.md",
+  "AI Video Editing Pack/skills/waterfall/SKILL.md",
+  "AI Video Editing Pack/templates/DELIVERY AND LEARNING.md",
+  "AI Video Editing Pack/templates/EDIT PLAN AND REVIEW.md",
+  "AI Video Editing Pack/templates/EDITING PROFILE.md",
+  "AI Video Editing Pack/templates/PROJECT INTAKE.md",
+  "AI Video Editing Pack/tests/test_pack.py",
+  "AI Video Editing Pack/tools/build_pack.py",
+  "AI Video Editing Pack/tools/setup_project.py"
 ];
 
 const canonicalBundles = [
@@ -109,6 +141,11 @@ const toolTests = new Map([
 ]);
 
 const allowedExtensions = new Set([".md", ".json", ".mjs", ".py", ".txt", ".ts", ".tsx"]);
+const allowedHiddenFiles = new Set([
+  ".agents/plugins/marketplace.json",
+  ".claude-plugin/marketplace.json",
+  "AI Video Editing Pack/.claude-plugin/plugin.json"
+]);
 const allowedMinimumCapabilities = new Set(["chat_only", "read_files", "write_files", "run_named_tools"]);
 const allowedAdditionalCapabilities = new Set([
   "connected_app",
@@ -261,6 +298,18 @@ function runMutationTests() {
         item.systems[9].status = "experimental";
       });
     }, "System 10 status must be public_ready");
+    runCase("editing-marketplace-escape", (caseRoot) => {
+      const catalogPath = path.join(caseRoot, ".agents/plugins/marketplace.json");
+      const catalog = JSON.parse(fs.readFileSync(catalogPath, "utf8"));
+      catalog.plugins[0].source.path = "../outside";
+      fs.writeFileSync(catalogPath, JSON.stringify(catalog));
+    }, "OpenAI editing marketplace must use the declared local pack");
+    runCase("editing-plugin-version-drift", (caseRoot) => {
+      const pluginPath = path.join(caseRoot, "AI Video Editing Pack/.claude-plugin/plugin.json");
+      const plugin = JSON.parse(fs.readFileSync(pluginPath, "utf8"));
+      plugin.version = "999.0.0";
+      fs.writeFileSync(pluginPath, JSON.stringify(plugin));
+    }, "Editing plugin manifests must agree");
   } finally {
     fs.rmSync(temporaryRoot, { recursive: true, force: true });
   }
@@ -294,7 +343,44 @@ function runPublicToolTests(manifest) {
       passed += 1;
     }
   }
+  const packResult = spawnSync("python3", ["-B", "-m", "unittest", "discover", "-s", "tests", "-p", "test_*.py"], {
+    cwd: path.join(root, "AI Video Editing Pack"),
+    encoding: "utf8",
+    env: { ...(process.env.PATH ? { PATH: process.env.PATH } : {}), PYTHONDONTWRITEBYTECODE: "1" },
+    timeout: 180000
+  });
+  if (packResult.status !== 0) {
+    testFailures.push(`Editing pack tests failed: ${packResult.stdout || ""}\n${packResult.stderr || ""}`);
+  } else passed += 1;
   return { failures: testFailures, passed };
+}
+
+function validateEditingPlugin() {
+  try {
+    const read = (file) => JSON.parse(fs.readFileSync(path.join(root, file), "utf8"));
+    const portable = read("AI Video Editing Pack/plugin.json");
+    const claude = read("AI Video Editing Pack/.claude-plugin/plugin.json");
+    const openaiCatalog = read(".agents/plugins/marketplace.json");
+    const claudeCatalog = read(".claude-plugin/marketplace.json");
+    if (portable.$schema !== "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json") fail("Editing plugin must use the portable schema");
+    if (portable.name !== "ai-video-editing-pack" || !/^\d+\.\d+\.\d+$/.test(portable.version || "")) fail("Editing plugin name or version is invalid");
+    for (const key of ["name", "version", "description"]) {
+      if (!portable[key] || portable[key] !== claude[key]) fail("Editing plugin manifests must agree");
+    }
+    if (openaiCatalog.name !== "payton-ai-tools" || openaiCatalog.plugins?.length !== 1 ||
+        openaiCatalog.plugins[0]?.name !== portable.name ||
+        openaiCatalog.plugins[0]?.source?.source !== "local" ||
+        openaiCatalog.plugins[0]?.source?.path !== "./AI Video Editing Pack") {
+      fail("OpenAI editing marketplace must use the declared local pack");
+    }
+    if (claudeCatalog.name !== "payton-ai-tools" || claudeCatalog.plugins?.length !== 1 ||
+        claudeCatalog.plugins[0]?.name !== portable.name || claudeCatalog.plugins[0]?.version !== portable.version ||
+        claudeCatalog.plugins[0]?.source !== "./AI Video Editing Pack") {
+      fail("Claude editing marketplace must use the declared local pack and version");
+    }
+  } catch (error) {
+    fail(`Editing plugin metadata must be readable JSON: ${error.message}`);
+  }
 }
 
 let manifest = null;
@@ -439,9 +525,11 @@ const unresolvedRules = [
   ["unresolved mustache placeholder", /\{\{[^{}\n]+\}\}/g]
 ];
 
+validateEditingPlugin();
+
 for (const filePath of actualFilePaths) {
   const relativePath = toPosix(path.relative(root, filePath));
-  if (relativePath.split("/").some((segment) => segment.startsWith("."))) {
+  if (relativePath.split("/").some((segment) => segment.startsWith(".")) && !allowedHiddenFiles.has(relativePath)) {
     fail(`Unexpected hidden file: ${relativePath}`);
     continue;
   }
@@ -524,5 +612,5 @@ if (failures.length) {
 }
 
 console.log(
-  `Library validation passed: ${canonicalSystems.length} canonical systems, ${canonicalBundles.length} public collections, ${actualFiles.size} exactly declared non-empty files, 13 mutation checks, and ${passedToolSuites} runnable tool suites. System 10 keeps its documented first-production proof boundary.`
+  `Library validation passed: ${canonicalSystems.length} canonical systems, ${canonicalBundles.length} public collections, ${actualFiles.size} exactly declared non-empty files, 15 mutation checks, and ${passedToolSuites} runnable tool suites. System 10 keeps its documented first-production proof boundary.`
 );
