@@ -1,61 +1,96 @@
 # Start Here: AI Video Editing Pack
 
-This collection coordinates Systems 14, 05, 09 and 10 from the repository root.
-Start with existing footage. Script writing and recording are outside this
-pack's main job. Keep publishing separate from editing.
+This is the stable entry page for the portable pack:
+[open it on GitHub](https://github.com/paytonbilodeau/paytons-ai-systems/blob/main/AI%20Video%20Editing%20Pack/START%20HERE.md).
+You can paste that URL into an AI assistant or paste the setup message below.
+The [standalone ZIP](https://github.com/paytonbilodeau/paytons-ai-systems/releases/latest/download/ai-video-editing-pack.zip)
+contains the skills, guides and templates. Keep footage and projects in a
+separate private working folder.
 
-## Give your AI this setup message
-
-Point a file-aware assistant at the extracted repository folder, then paste:
+## Give your AI this message
 
 ```text
-Help me set up and use the AI Video Editing Pack in this repository.
+Help me edit a recorded video using the AI Video Editing Pack. Start here:
+https://github.com/paytonbilodeau/paytons-ai-systems/blob/main/AI%20Video%20Editing%20Pack/START%20HERE.md
+Read that guide and its linked skills, beginning with
+skills/vibe-editing-setup/SKILL.md, then the umbrella, intake and
+platform-refresh skills. If you cannot open the links, tell me and ask me to
+upload the standalone ZIP. If you have authorized local file access, you may
+download and unpack that ZIP in a new folder outside my existing projects,
+then read it. Do not install a plugin or change my editor automatically.
 
-Read AI Video Editing Pack/README.md and this START HERE.md, then the root
-READ ME FIRST.md and System 14's START HERE.md, INSTALL.md, CURRENT LIMITS
-AND PROOF.md, and guides/POST-PRODUCTION WALKTHROUGH.md. Resolve paths from
-the repository root. Read other systems only when the chosen task needs them.
+Ask only for answers you cannot verify: my AI app and its local access, operating system,
+editor and version, footage and audio sources, intended content and audience,
+visual references, privacy limits, and the result I want.
 
-Ask for my operating system, editor and edition, the AI assistant I'm using,
-and the recording I want to edit. Use what you can already verify instead of
-making me repeat it. Explain unfamiliar terms simply. Tell me what you can
-actually read, change and run, and what I would need to do myself.
+First tell me what you can actually inspect, change, and run. Check current
+capabilities before proposing an editor connection. A browser-only chat can
+plan and guide; it cannot edit local media or verify an export. Let me choose
+tools. Keep my existing editor if it works; if I am choosing from scratch,
+recommend DaVinci Resolve and verify the current edition and setup. For a
+complex edit, help me select an AI model with sufficient reasoning and time
+without assuming a model name stays current. Ask before new installs, paid
+services, model downloads, broader access, or uploading private footage unless
+I already authorized that action.
 
-Begin with a copy of a short recording and the tools I already have. Help me
-prove the editor connection and make a clean editable cut before adding
-motion. Use System 05 only if I want its separate automatic first-pass tool.
-Use System 09 for motion when needed. Use System 10 only if I ask for clips
-or other derivatives after the source edit is approved.
+Keep original media untouched. Make a working copy and editable timeline.
+Use source-research to inspect the actual recording and any authorized
+references. Use cuts-pacing for a clean cut with complete words, useful pauses,
+and readable demonstrations. Then use audio and color. Add style-motion only for
+visuals that help the point. Use native editor tools unless a specific
+Remotion or Hyperframes route is warranted and approved.
 
-Walk me through cuts and pacing, audio and color, the requested visuals, and
-review of the final export. Show what changed. Ask for my feedback at useful
-points, preserve accepted changes, and help me add my own finishing touches.
-Keep the editable project and original media recoverable.
+If I ask for a conservative local automatic first pass, offer the separate
+pre-edit skill and its tested System 05 utility. Show a dry plan for approval
+before rendering. Do not treat its flattened MP4 as an editable timeline.
 
-Save my project brief, tested setup, style references and accepted corrections
-under _MY WORK/AI Video Editing in my working copy. Use the learning log to
-distinguish my preferences from general fixes and one-video choices. Do not
-claim that saving instructions trains a model or proves a future result.
+Record source evidence, edit decisions, and versions in the pack templates.
+Stop for my acceptance after the clean cut and again after the final export.
+Preserve accepted work while I add my own touches. Use review-delivery to
+reopen the saved project, watch and listen to the exact export, and compare my
+manual corrections with the prior version. Save narrow accepted lessons, but
+do not claim this trains a model or guarantees the next edit. Keep accepted
+cross-project rules in a private EDITING PROFILE.md outside this one project,
+and record its path in PROJECT INTAKE.md.
 
-Ask before new installations, paid services, model downloads or wider access,
-unless I have already authorized that exact action. Do not publish, upload
-private footage to a new service, or replace my working setup without approval.
-Finish by showing the exported result, checking the saved project reopens,
-and stating what was tested and what still needs human review.
+Only after I approve the source edit, ask whether I want short clips or other
+derivatives. If so, use the waterfall skill and check framing, captions, and
+safe zones for each output. Publishing is separate from editing.
 ```
 
-An assistant without local access can explain the steps and help complete the
-brief. It cannot inspect your installation, operate an editor or verify an
-export. Keep that distinction clear rather than treating a chat answer as setup.
+The first test is a copied 20 to 60 second recording. A complete result is an
+editable project that reopens and an exported video a person has watched and
+listened to. Begin with [project intake](templates/PROJECT%20INTAKE.md) and
+the [editing workflow](references/EDIT%20WORKFLOW.md).
 
-## Complete one project before expanding
+## Optional private-folder setup
 
-1. **Setup:** establish the tools and an actual connection in [System 14](../14%20AI%20Video%20Editing%20System/INSTALL.md).
-2. **Edit:** follow the [post-production walkthrough](../14%20AI%20Video%20Editing%20System/guides/POST-PRODUCTION%20WALKTHROUGH.md).
-3. **Learn:** record the correction and a before/after example in the [learning log](../14%20AI%20Video%20Editing%20System/templates/LEARNING%20LOG.md).
-4. **Repeat or repurpose:** test the same workflow on a new recording, or send an
-   approved clean source to [System 10](../10%20Content%20Waterfall%20System/START%20HERE.md).
+The paste message above needs no Python. If you want the included helper to
+create worksheet copies, use Python 3.11 or newer and preview this command
+from the extracted pack folder:
 
-Use [System 14's tracker](../14%20AI%20Video%20Editing%20System/templates/TEN-RUN%20EDITING%20TRACKER.md)
-for setup, editing, review and correction time. A good first result is useful
-evidence; consistent performance needs more than one successful clip.
+```sh
+python3 tools/setup_project.py --project "/path/to/my-video-project" --profile-dir "/path/to/my-private-editing-profile"
+```
+
+The helper previews every file it would create. If both private destinations
+are right, repeat the command with `--apply`. It copies three project
+worksheets into the project folder and `EDITING PROFILE.md` into the separate,
+durable profile folder. Record that profile path in `PROJECT INTAKE.md` and
+reuse it for later projects. The helper refuses to overwrite edited files.
+If that profile already exists, it reuses the file unchanged while creating
+the new project's worksheets.
+On Windows, use `py -3.11` in place of `python3`.
+
+You can do the same manually: make two private folders outside this pack,
+copy `PROJECT INTAKE.md`, `EDIT PLAN AND REVIEW.md`, and
+`DELIVERY AND LEARNING.md` from `templates/` into the project folder, copy
+[EDITING PROFILE.md](templates/EDITING%20PROFILE.md) into the durable profile
+folder if it is new, and record both locations in the intake. Reuse an
+existing private profile as it is. If you also want a portable
+skill copy, add `--skills-dir "/path/to/my-assistant-skills"` to the preview
+and apply commands. Check your AI app's current folder rules first. Copying
+files does not activate a native plugin.
+
+For the recommended local Codex route and its permission choices, read the
+dated [AI app setup guide](references/AI%20APP%20SETUP.md).

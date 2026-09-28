@@ -4,7 +4,7 @@ Fourteen free, working template systems for turning a file-aware AI assistant in
 
 This is the complete public template library. It is not a prompt list, course, subscription, or coaching offer. Every system has standing instructions, a start guide, editable templates, and, where the work demands it, small local tools with tests.
 
-**Here for AI video editing? Start with the [Free AI Video Editing Pack](AI%20Video%20Editing%20Pack/README.md).** It gives you one setup message and a practical path through cuts, pacing, audio, color, motion, feedback and optional repurposing. The other systems remain available below.
+**Here for AI video editing? Start with the [Free AI Video Editing Pack](AI%20Video%20Editing%20Pack/START%20HERE.md).** Copy its setup message into your AI, or [download the standalone pack](https://github.com/paytonbilodeau/paytons-ai-systems/releases/latest/download/ai-video-editing-pack.zip). It interviews you, checks your tools, and guides cuts, pacing, audio, color, motion, finishing and optional repurposing. The other systems remain available below.
 
 ## Try one in five minutes
 
@@ -39,7 +39,13 @@ Every system has a `START HERE.md` and a `SYSTEM.md`. The bigger ones add templa
 
 ## Start with video editing
 
-For the focused collection, open the [AI Video Editing Pack](AI%20Video%20Editing%20Pack/README.md), then use its [setup message](AI%20Video%20Editing%20Pack/START%20HERE.md). The pack links the maintained editing, pre-edit, motion and waterfall systems without duplicating them.
+For the focused collection, open the [AI Video Editing Pack](AI%20Video%20Editing%20Pack/README.md), then use its [setup message](AI%20Video%20Editing%20Pack/START%20HERE.md). The pack contains modular skills, project templates, current setup guides, and a preview-first project setup tool. It links the maintained pre-edit, motion and waterfall utilities without duplicating their code.
+
+Native plugin manifests and repository catalogs are included for compatible
+OpenAI and Claude hosts. Follow the pack's installation instructions for your
+app. A plugin supplies instructions; your assistant still needs a verified
+connection and permission to operate your editor. Final Cut, Premiere, CapCut,
+and Resolve have different connection routes and availability.
 
 For the full editing workflow, [System 14: AI Video Editing](14%20AI%20Video%20Editing%20System/START%20HERE.md) includes Resolve/MCP setup, Remotion and Hyperframes routes, reference-based style building, manual revision learning and editable delivery. Its [post-production walkthrough](14%20AI%20Video%20Editing%20System/guides/POST-PRODUCTION%20WALKTHROUGH.md) starts with a short copied clip and one useful result.
 
@@ -52,7 +58,7 @@ For a lighter automatic first pass, [System 05: Video Pre-Edit](05%20Video%20Pre
 - **AI Skills and Automation Collection:** systems 02, 03, 11, and 12
 - **Complete AI Systems Library:** all fourteen
 
-All fourteen systems and all three focused collections are free in this repository. Download the repository ZIP or clone it, keep a clean copy, and do your work in a separate working copy. The editing pack is a focused route through the same files, not a separate paid product or an installed editor plugin.
+All fourteen systems and all three focused collections are free in this repository. Download the repository ZIP or clone it, keep a clean copy, and do your work in a separate private project folder. The standalone editing pack contains AI skills and guides; it does not install a plugin inside your video editor or include the editor itself.
 
 ## Updates
 
@@ -60,9 +66,10 @@ This repository is the public release channel. Reusable improvements from Payton
 
 Updates never change your local customized files automatically. Read `CHANGELOG.md`, compare the changed files, and adopt only what you want.
 
-Version 3.11.0 adds the dedicated AI Video Editing Pack, one assistant-guided
-setup message and a full post-production walkthrough. Existing system paths,
-tools and free access remain unchanged.
+Version 3.12.0 expands the AI Video Editing Pack into a modular AI plugin and
+standalone download, with an onboarding interview, source-aware audio and color,
+editor connections, reference-led motion, export review and reusable feedback.
+Existing system paths, tools and free access remain available.
 
 ## License
 

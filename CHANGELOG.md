@@ -2,6 +2,16 @@
 
 New releases appear first. Apply only the changes you want to a separate working copy.
 
+## 3.12.0 - 2026-09-28
+
+- Expand the free AI Video Editing Pack with modular skills, a URL-first setup prompt, a guided interview and private project worksheets.
+- Add OpenAI portable and Claude plugin manifests plus repository marketplace catalogs. These supply AI instructions, not a universal video-editor connector.
+- Document current local AI setup and permissions, Resolve/Final Cut/Premiere/CapCut connection differences, optional local pre-editing, Remotion/HyperFrames, LUT testing and source-aware audio.
+- Add detailed cutting judgment, human finishing, scoped correction learning, export checks and platform-aware repurposing while keeping private styles and account details out.
+- Add a deterministic standalone ZIP builder and a dry-run-first project copier that preserves edited files and rejects unsafe destinations.
+- Validate exact declared files and the three required hidden plugin metadata files; retain privacy checks and add plugin metadata mutation checks and the pack's tool tests.
+- Package release downloads separately from the source repository. Model names and changing plan details stay out of the evergreen teaching path.
+
 ## 3.11.0 - 2026-09-28
 
 - Add a dedicated free AI Video Editing Pack with a download route and one assistant-guided setup message.
