@@ -186,6 +186,8 @@ function walk(directory) {
   const files = [];
   for (const entry of fs.readdirSync(directory, { withFileTypes: true })) {
     if (entry.name === ".git" || entry.name === ".gitignore") continue;
+    // Local byproducts that git already ignores: Python's bytecode cache and OS folder files.
+    if (["__pycache__", ".DS_Store", "Thumbs.db"].includes(entry.name)) continue;
     const fullPath = path.join(directory, entry.name);
     if (entry.isSymbolicLink()) {
       fail(`Symbolic link is not allowed: ${toPosix(path.relative(root, fullPath))}`);

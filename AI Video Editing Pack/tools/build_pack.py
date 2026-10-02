@@ -55,7 +55,9 @@ def validate(root: Path = ROOT) -> list[str]:
     actual = {
         p.relative_to(root).as_posix()
         for p in root.rglob("*")
-        if p.is_file() or p.is_symlink()
+        if (p.is_file() or p.is_symlink())
+        and "__pycache__" not in p.parts
+        and p.name not in {".DS_Store", "Thumbs.db"}
     }
     for extra in sorted(actual - declared):
         problems.append(f"undeclared pack file: {extra}")
